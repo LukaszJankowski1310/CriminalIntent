@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
+import androidx.room.Update
 import com.example.criminalintent.Crime
 import java.util.*
 
@@ -16,6 +17,8 @@ interface CrimeDao {
     fun getCrime(id: UUID): LiveData<Crime?>
 
     @Insert
-    suspend fun insertCrime(crime : Crime)
+    fun addCrime(crime : Crime)
 
+    @Update
+    fun updateCrime(crime : Crime)
 }
