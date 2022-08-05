@@ -35,7 +35,6 @@ CrimeListFragment.Callbacks {
                 .add(R.id.fragment_container, fragment)
                 .commit()
         }
-
     }
 
     override fun onCrimeSelected(crimeId: UUID) {
@@ -54,35 +53,3 @@ CrimeListFragment.Callbacks {
 
 
 
-/*
-private lateinit var tvInfo : TextView
-private lateinit var etInfo : EditText
-*/
-/*
-tvInfo = findViewById(R.id.tv_info)
-etInfo = findViewById(R.id.et_info)
-
-
-val titleWatcher = object : TextWatcher {
-    override fun beforeTextChanged(
-        sequence: CharSequence?,
-        start: Int,
-        count: Int,
-        after: Int
-    ) {
-        tvInfo.text = sequence.toString()
-    }
-    override fun onTextChanged(
-        sequence: CharSequence?,
-        start: Int,
-        before: Int,
-        count: Int
-    ) {
-        tvInfo.text = sequence.toString()
-    }
-    override fun afterTextChanged(sequence: Editable?) {
-        // This one too
-    }
-}
-etInfo.addTextChangedListener(titleWatcher)
- */
